@@ -7,9 +7,3 @@ const tarotReading = () => {
 }
 let condition = false;
 
-while (condition === false) {
-    let test = tarotReading();
-    if (test === '0. The Fool') {
-        condition = true;
-    }
-}
