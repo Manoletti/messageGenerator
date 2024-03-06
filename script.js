@@ -2,8 +2,16 @@ tarotCards = ["0. The Fool", "I. The Magician", "II. The High Priestess", "III. 
 
 const tarotReading = () => {
     let reading = tarotCards[Math.floor(Math.random() * 22)];
-    console.log(reading);
     return reading;
 }
-let condition = false;
 
+const threeCards = () => {
+    let past = tarotReading();
+    let present = tarotReading();
+    let future = tarotReading();
+    return [`Your past was marked by ${past}.`, `Your present is affected by ${present}.`, `Your future will be determined by ${future}.`];
+}
+
+let result = threeCards();
+
+result.forEach(item => console.log(item));
